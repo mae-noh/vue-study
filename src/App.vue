@@ -42,11 +42,11 @@
       // }
       addCounter() {
         // commit을 이용하여 mutations 이벤트 호출
-        this.$store.commit('addCounter');
+        this.$store.commit('addCounter', 10);
         console.log(this.$store);
       },
       subCounter() {
-        this.$store.commit('subCounter');
+        this.$store.commit('subCounter', 10);
         console.log(this.$store);
       },
     }

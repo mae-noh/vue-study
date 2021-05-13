@@ -13,11 +13,11 @@ export default new Vuex.Store({
   // mutation : 동기적으로 로직 정의
   // 정의한 로직들을 순차적으로 실행 - 추적 용이
   mutations: {
-    addCounter: function(state){
-      return state.counter++;
+    addCounter: function(state, payload){
+      return state.counter+=payload;
     },
-    subCounter: function(state){
-      return state.counter--;
+    subCounter: function(state, payload){
+      return state.counter-=payload;
     },
   },
   actions: {
