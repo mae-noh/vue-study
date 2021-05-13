@@ -15,5 +15,10 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+  },
+  getters: {
+    getCounter : function(state){
+      return state.counter;
+    }
   }
 })
