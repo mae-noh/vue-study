@@ -40,14 +40,16 @@
       // subCounter(){
       //   this.$store.state.counter--;
       // }
-      addCounter() {
-        // commit을 이용하여 mutations 이벤트 호출
-        this.$store.commit('addCounter', 10);
-        console.log(this.$store);
+      // addCounter() {
+      //   // commit을 이용하여 mutations 이벤트 호출
+      //   this.$store.commit('addCounter', 10);
+      //   console.log(this.$store);
+      // },
+      addCounter(){
+        this.$store.dispatch('addCounter');
       },
       subCounter() {
-        this.$store.commit('subCounter', 10);
-        console.log(this.$store);
+        this.$store.commit('subCounter');
       },
     }
   };
