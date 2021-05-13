@@ -3,7 +3,7 @@
     
   <!-- App.vue(Parent) -->
   <div id="app">
-    Parent counter : {{ counter }} <br>
+    Parent counter : {{ $store.state.counter }} <br>
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
     <!-- Child 컴포넌트를 등록하고 counter 데이터 속성을 props로 전달한다. -->
@@ -20,18 +20,18 @@
       // Child 컴포넌트를 하위 컴포넌트로 등록
       child: Child
     },
-    data() {
-      return {
-        counter: 0
-      };
-    },
+    // data() {
+    //   return {
+    //     counter: 0
+    //   };
+    // },
     methods: {
       // 이벤트 추가
       addCounter() {
-        this.counter++;
+        this.$store.state.counter++;
       },
       subCounter() {
-        this.counter--;
+        this.$store.state.counter--;
       }
     }
   };
